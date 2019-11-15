@@ -1,0 +1,79 @@
+@import './smart-grid';
+@import './mixins';
+
+footer {
+    @include content-padding();
+    .container {
+        max-width: 800px;
+    }
+
+    .row {
+        justify-content: space-evenly;
+    }
+
+    .left, .right {
+        @include col();
+        @include size(12);
+        @include size-sm(20);
+        @include sm(margin-bottom, 40px);
+    }
+
+    .list {
+        .link {
+            font-size: 21px;
+            color: #333;
+
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+
+        .item {
+            margin: 5px 0;
+        }
+    }
+
+    .logo {
+        font-size: 30px;
+        text-align: center;
+        a {
+            color: #333;
+        }
+    }
+
+    .social-links {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        a {
+            font-size: 30px;
+            display: inline-block;
+            margin: 0 15px;
+            color: #333;
+            transition: text-shadow .2s;
+
+            &:hover {
+                text-shadow: 0 0 2px #333;
+            }
+        }
+    }
+
+    .footer-contacts {
+        margin-bottom: 20px;
+        font-size: 21px;
+        line-height: 1.5;
+
+        a {
+            color: #333;
+
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+
+        @include sm-block {
+            text-align: center;
+        }
+    }
+}

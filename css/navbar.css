@@ -1,0 +1,412 @@
+.navbar {
+  width: 100%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  background: #fff;
+  position: fixed;
+  top: 0;
+  left: 0;
+  -webkit-transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out;
+  z-index: 1111;
+}
+
+.navbar.scrolled .navbar-menu .item {
+  height: 70px;
+}
+
+.navbar-container {
+  max-width: 95%;
+  width: 1100px;
+  margin: 0 auto;
+}
+
+@media screen and (max-width: 1024px) {
+  .navbar-container {
+    width: 970px;
+  }
+}
+
+.navbar-inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  position: relative;
+}
+
+.navbar-logo a {
+  font-size: 30px;
+  color: #333;
+}
+
+@media screen and (max-width: 1024px) {
+  .navbar-logo a {
+    font-size: 24px;
+  }
+}
+
+.navbar-menu {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.navbar-menu .list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.navbar-menu .item {
+  margin: 0 7px;
+  height: 90px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transition: height 200ms ease-in-out;
+  transition: height 200ms ease-in-out;
+  position: relative;
+}
+
+@media screen and (max-width: 1024px) {
+  .navbar-menu .item {
+    height: 70px;
+  }
+}
+
+.navbar-menu .link {
+  font-size: 16px;
+  font-weight: bold;
+  color: #2C5364;
+  display: inline-block;
+  padding: 7px;
+  border-radius: 5px;
+  overflow: hidden;
+  position: relative;
+  -webkit-transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out;
+}
+
+.navbar-menu .link::before {
+  content: '';
+  display: inline-block;
+  position: absolute;
+  width: 100%;
+  height: 0px;
+  left: 0;
+  bottom: 0;
+  z-index: 111;
+  background: #0dace8;
+  z-index: -1;
+  -webkit-transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out;
+}
+
+.navbar-menu .link:hover::before {
+  height: 100%;
+}
+
+.navbar-menu .link:hover {
+  color: #fff;
+  -webkit-transform: translateY(-3px);
+          transform: translateY(-3px);
+}
+
+.navbar-toggler .btn {
+  width: 35px;
+  height: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  cursor: pointer;
+  z-index: 1111;
+}
+
+.navbar-toggler .btn .lines {
+  width: 80%;
+  height: 3px;
+  background: #000;
+  border-radius: 10px;
+  -webkit-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out;
+  -webkit-transform: rotate(0) translate(0, 0);
+          transform: rotate(0) translate(0, 0);
+}
+
+.navbar-toggler .btn.active .line-2 {
+  opacity: 0;
+}
+
+.navbar-toggler .btn.active .line-1 {
+  -webkit-transform: rotate(221deg) translate(-5px, -6px);
+          transform: rotate(221deg) translate(-5px, -6px);
+}
+
+.navbar-toggler .btn.active .line-3 {
+  -webkit-transform: rotate(-220deg) translate(-6px, 7px);
+          transform: rotate(-220deg) translate(-6px, 7px);
+}
+
+@media only screen and (min-width: 769px) {
+  .navbar-submenu {
+    min-width: 200px;
+    border-top: 3px solid #2C5364;
+    position: absolute;
+    top: 100%;
+    padding: 20px 0;
+    background: #fff;
+    border-radius: 0 0 3px 3px;
+    opacity: 0;
+    -webkit-transform: translateY(40px);
+            transform: translateY(40px);
+    visibility: hidden;
+    -webkit-transition: all .2s ease-in-out;
+    transition: all .2s ease-in-out;
+  }
+  .navbar-submenu .subitem {
+    margin: 10px 0;
+  }
+  .navbar-submenu .sublink {
+    display: inline-block;
+    font-size: 15px;
+    font-weight: 400;
+    color: #333;
+    padding: 3px 20px;
+    -webkit-transition: all .2s ease-in-out;
+    transition: all .2s ease-in-out;
+    white-space: nowrap;
+  }
+  .navbar-submenu .sublink:hover {
+    padding-left: 25px;
+    padding-right: 15px;
+    color: #000;
+  }
+}
+
+@media only screen and (min-width: 769px) {
+  .navbar-submenu.big {
+    width: 100%;
+    left: 0;
+  }
+  .navbar-submenu.big .row-inner {
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+  }
+  .navbar-submenu.big .sublist {
+    width: 25%;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+  }
+  .navbar-submenu.big .sublist:not(:last-of-type) {
+    border-right: 1px solid #d3d3d3;
+  }
+  .navbar-submenu.big .sublist-heading {
+    margin-bottom: 15px;
+  }
+  .navbar-submenu.big .sublist-heading a {
+    display: block;
+    color: #0f2027;
+    font-size: 16px;
+    text-align: center;
+  }
+  .navbar-submenu.big .sublink {
+    white-space: normal;
+  }
+}
+
+.navbar-menu .item:hover .navbar-submenu {
+  opacity: 1;
+  visibility: visible;
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+}
+
+.navbar-menu .item:hover + .navbar-submenu.big, .navbar-submenu.big:hover {
+  opacity: 1;
+  visibility: visible;
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+}
+
+.navbar-contacts .phone-call a {
+  font-size: 19px;
+  color: #333;
+}
+
+.navbar-contacts .telegram {
+  margin-bottom: 5px;
+}
+
+.navbar-contacts .telegram .btn-primary {
+  font-size: 16px;
+  padding: 4px 6px;
+}
+
+@media screen and (max-width: 768px) {
+  .navbar {
+    position: relative;
+    padding: 3px 0;
+  }
+  .navbar-inner {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .navbar-contacts {
+    -webkit-box-ordinal-group: 4;
+        -ms-flex-order: 3;
+            order: 3;
+    width: 33%;
+  }
+  .navbar-logo {
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
+    width: 33%;
+  }
+  .navbar-toggler {
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+    width: 33%;
+  }
+  .navbar-logo {
+    text-align: center;
+  }
+  .navbar-logo a {
+    font-size: 20px;
+  }
+  .navbar-toggler {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
+  .navbar-menu {
+    position: fixed;
+    left: -100%;
+    top: 0;
+    height: 100%;
+    -webkit-transition: all .3s ease-in-out;
+    transition: all .3s ease-in-out;
+    background: #fff;
+    padding: 0 100px;
+    padding-top: 50px;
+  }
+  .navbar-menu.active {
+    left: 0;
+  }
+  .navbar-menu .list {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    height: 100%;
+  }
+  .navbar-menu .item {
+    margin: 0;
+    height: auto;
+    position: static;
+    display: block;
+  }
+  .navbar-menu .navbar-logo {
+    margin-bottom: 40px;
+  }
+  .navbar-contacts {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .navbar-contacts .telegram {
+    margin-bottom: 0;
+  }
+  .navbar-contacts .phone-call a {
+    font-size: 12px;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .navbar-menu {
+    width: 100%;
+  }
+  .navbar-contacts {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .navbar-contacts .phone-call i, .navbar-contacts .telegram i {
+    font-size: 25px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .navbar.scrolled .item {
+    height: auto !important;
+  }
+  .navbar-submenu {
+    display: block;
+    position: static;
+    overflow: scroll;
+    max-height: 300px;
+    opacity: 1;
+  }
+  .navbar-submenu .row-inner {
+    display: block;
+  }
+  .navbar-submenu .sublist {
+    width: auto !important;
+    border-right: 0 !important;
+  }
+  .navbar-submenu .subItem {
+    margin: 0;
+  }
+}
+/*# sourceMappingURL=navbar.css.map */

@@ -1,0 +1,86 @@
+@import './mixins';
+@import './smart-grid';
+
+header {
+    background-color: #333;
+    box-shadow: inset 0 0 1000px 1000px rgba(#000, .6);
+}
+
+header {
+    background: #333 url(../img/webp/header-bg.webp) center center no-repeat;
+    background-size: cover;
+}
+
+.header-content {
+    @include flex-center();
+    min-height: 95vh;
+    text-align: center;
+    color: #fff;
+
+    .page-title {
+        font-size: 47px;
+        line-height: 1.5;
+        font-weight: bold;
+    }
+
+    .page-desc {
+        font-size: 23px;
+        line-height: 1.7;
+        font-weight: 300;
+
+        a {
+            color: #fff;
+
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+
+    ::selection {
+        background: #000; /* Safari */
+        color: #fff;
+    }
+
+    @include md-block {
+        .page-title {
+            font-size: 43px;
+            line-height: 1.2;
+        }
+
+        .page-desc {
+            font-size: 21px;
+            line-height: 1.5;
+        }
+    }
+
+    @include sm-block {
+        .page-title {
+            font-size: 37px;
+        }
+
+        .page-desc {
+            font-size: 19px;
+            line-height: 1.4;
+        }
+    }
+
+    @include xs-block {
+        min-height: 50vh;
+        .page-title {
+            font-size: 27px;
+        }
+
+        .page-desc {
+            font-size: 17px;
+        }
+    }
+}
+
+.header-content.subpage {
+    min-height: 80vh;
+
+    @include xs-block {
+        min-height: 50vh;
+    }
+}
