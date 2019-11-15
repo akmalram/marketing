@@ -430,6 +430,10 @@ main ::selection {
   margin-bottom: 30px;
 }
 
+.banner {
+  text-align: center;
+}
+
 .accordion .title-secondary {
   margin: 10px 0;
 }
@@ -446,9 +450,10 @@ main ::selection {
 }
 
 .accordion .item label .icon {
-  width: 50px;
-  height: 50px;
-  border: 1px solid #000;
+  width: 30px;
+  height: 30px;
+  border: 3px solid #000;
+  border-radius: 5px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -462,7 +467,7 @@ main ::selection {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  font-size: 28px;
+  font-size: 20px;
   -ms-flex-negative: 0;
       flex-shrink: 0;
 }
@@ -499,8 +504,8 @@ main ::selection {
 }
 
 .accordion .checker:checked ~ label i {
-  -webkit-transform: rotate(-90deg);
-          transform: rotate(-90deg);
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
 }
 
 .accordion .item .text {

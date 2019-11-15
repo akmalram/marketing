@@ -23,7 +23,7 @@ header {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  min-height: 95vh;
+  min-height: 80vh;
   text-align: center;
   color: #fff;
 }
@@ -91,10 +91,6 @@ header {
   .header-content .page-desc {
     font-size: 17px;
   }
-}
-
-.header-content.subpage {
-  min-height: 80vh;
 }
 
 @media screen and (max-width: 576px) {

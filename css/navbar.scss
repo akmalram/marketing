@@ -76,7 +76,7 @@ $color-secondary: #fff;
         .link {
             font-size: 16px;
             font-weight: bold;
-            color: #2C5364;
+            color: #000000;
             display: inline-block;
             padding: 7px;
             border-radius: 5px;
@@ -205,6 +205,7 @@ $color-secondary: #fff;
 
             .sublist-heading {
                 margin-bottom: 15px;
+                font-weight: bold;
 
                 a {
                     display: block;
@@ -234,6 +235,7 @@ $color-secondary: #fff;
     }
 
     &-contacts {
+        text-align: center;
         .phone-call {
             a {
                 font-size: 19px;
