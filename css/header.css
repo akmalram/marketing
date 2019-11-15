@@ -74,7 +74,7 @@ header {
 
 @media screen and (max-width: 768px) {
   .header-content {
-    min-height: 65vh;
+    min-height: 50vh;
   }
   .header-content .page-title {
     font-size: 37px;
