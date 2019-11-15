@@ -75,6 +75,9 @@ main ::selection {
   width: calc(33.33333% - 30px);
   max-width: 300px;
   text-align: center;
+  border-radius: 10px;
+  padding: 10px;
+  box-sizing: border-box;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -85,6 +88,8 @@ main ::selection {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out;
 }
 
 @media screen and (max-width: 768px) {
@@ -97,6 +102,14 @@ main ::selection {
   .presentation .item {
     width: calc(100% - 30px);
   }
+}
+
+.presentation .item:hover {
+  background: #6363630e;
+  -webkit-box-shadow: 0 50px 100px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 50px 100px rgba(0, 0, 0, 0.2);
+  -webkit-transform: translateY(-3px);
+          transform: translateY(-3px);
 }
 
 .presentation .img i {
