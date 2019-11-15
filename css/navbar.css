@@ -281,7 +281,6 @@
 
 @media screen and (max-width: 768px) {
   .navbar {
-    position: relative;
     padding: 3px 0;
   }
   .navbar-inner {

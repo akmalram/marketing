@@ -259,7 +259,6 @@ $color-secondary: #fff;
 
 @include sm-block {
     .navbar {
-        position: relative;
         padding: 3px 0;
 
         &-inner {

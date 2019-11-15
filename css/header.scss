@@ -56,6 +56,8 @@ header {
     }
 
     @include sm-block {
+        min-height: 65vh;
+
         .page-title {
             font-size: 37px;
         }
@@ -67,7 +69,6 @@ header {
     }
 
     @include xs-block {
-        min-height: 50vh;
         .page-title {
             font-size: 27px;
         }

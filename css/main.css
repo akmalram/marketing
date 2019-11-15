@@ -139,6 +139,12 @@ main ::selection {
 @media screen and (max-width: 576px) {
   .presentation .item {
     margin-bottom: 30px;
+    -webkit-box-shadow: 0 0px 50px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 0px 50px rgba(0, 0, 0, 0.1);
+  }
+  .presentation .btn-primary {
+    background: #0dace8;
+    color: #fff;
   }
 }
 
@@ -442,8 +448,12 @@ main ::selection {
   margin-bottom: 30px;
 }
 
-.banner {
+.banner img {
   text-align: center;
+  overflow: hidden;
+  -webkit-box-shadow: 0 0 30px rgba(0, 0, 0, 0.3);
+          box-shadow: 0 0 30px rgba(0, 0, 0, 0.3);
+  border-radius: 5px;
 }
 
 .accordion .title-secondary {

@@ -73,6 +73,9 @@ header {
 }
 
 @media screen and (max-width: 768px) {
+  .header-content {
+    min-height: 65vh;
+  }
   .header-content .page-title {
     font-size: 37px;
   }
@@ -83,9 +86,6 @@ header {
 }
 
 @media screen and (max-width: 576px) {
-  .header-content {
-    min-height: 50vh;
-  }
   .header-content .page-title {
     font-size: 27px;
   }
