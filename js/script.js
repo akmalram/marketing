@@ -131,7 +131,15 @@ load(() => {
     }
 
     ShowMoreClassToggler();
-})
+});
+
+load(() => {
+    document.querySelector('header').style.cssText = `background-position-y: calc(50% + ${window.scrollY / 1.5}px);`
+
+    window.addEventListener('scroll', () => {
+        document.querySelector('header').style.cssText = `background-position-y: calc(50% + ${window.scrollY / 1.5}px);`
+    });
+});
 
 
 // Font Observing

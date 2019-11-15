@@ -9,6 +9,8 @@ header {
 header {
     background: #333 url(../img/webp/header-bg.webp) center center no-repeat;
     background-size: cover;
+    background-position-y: 50%;
+    transition: all 50ms ease-in-out;
 }
 
 .header-content {
@@ -74,12 +76,5 @@ header {
         .page-desc {
             font-size: 17px;
         }
-    }
-}
-
-.header-content.subpage {
-
-    @include xs-block {
-        min-height: 50vh;
     }
 }
