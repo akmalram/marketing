@@ -365,7 +365,7 @@ main {
 .banner img {
     text-align: center;
     overflow: hidden;
-    box-shadow: 0 0 30px rgba($color: #000000, $alpha: .3);
+    box-shadow: 0 0 30px rgba($color: #0dace8, $alpha: .3);
     border-radius: 5px;
 }
 
@@ -513,7 +513,6 @@ main {
     }
 }
 
-
 .whatis {
     .pharagraph {
         font-size: 20px;
@@ -645,5 +644,24 @@ main {
         border: 2px solid #333;
         border-radius: 3px;
         margin-bottom: 20px;
+    }
+}
+
+.text-banner {
+    background-color: #f3f3f3;
+    padding: 30px 0;
+
+    .text {
+        font-size: 22px;
+    }
+
+    @include xs-block {
+        .text {
+            margin-bottom: 20px;
+        }
+        .container {
+            display: block;
+            text-align: center;
+        }
     }
 }

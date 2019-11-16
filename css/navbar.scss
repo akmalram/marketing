@@ -302,7 +302,7 @@ $color-secondary: #fff;
             height: 100%;
             transition: all .3s ease-in-out;
             background: #fff;
-            padding: 0 100px;
+            padding-left: 20px;
             padding-top: 50px;
 
             &.active {
@@ -313,7 +313,6 @@ $color-secondary: #fff;
                 flex-direction: column;
                 align-items: flex-start;
                 justify-content: flex-start;
-                height: 100%;
             }
 
             .item {
@@ -357,6 +356,10 @@ $color-secondary: #fff;
             display: flex;
             align-items: center;
 
+            .telegram {
+                margin-left: 5px;
+            }
+
             .phone-call i, .telegram i{
                 font-size: 25px;
             }
@@ -368,6 +371,10 @@ $color-secondary: #fff;
 
 @include sm-block {
     .navbar {
+
+        &-menu {
+            overflow-y: scroll;
+        }
         &.scrolled {
             .item {
                 height: auto !important;
@@ -376,8 +383,6 @@ $color-secondary: #fff;
         &-submenu {
             display: block;
             position: static;
-            overflow: scroll;
-            max-height: 300px;
             opacity: 1;
 
             .row-inner {
@@ -388,10 +393,40 @@ $color-secondary: #fff;
                 width: auto !important;
                 border-right: 0 !important;
 
+                &-heading {
+                    padding-left: 20px;
+                }
             }
 
-            .subItem {
+            .subitem {
+                padding-left: 10px;
+            }
+
+            .sublink {
+                color: #333;
+                text-decoration: underline;
+                display: inline-block;
+                margin: 5px 0;
+            }
+        }
+
+        &-submenu.big {
+            .checkbox-opener {
+                display: none;
+            }
+
+            .checkbox-opener:checked + .sublist .subitem {
+                max-height: 30px;
+                opacity: 1;
+            }
+
+            .subitem {
                 margin: 0;
+                max-height: 0;
+                opacity: 0;
+                overflow: hidden;
+                transition: all .3s ease-in-out;
+                padding-left: 30px;
             }
         }
     }

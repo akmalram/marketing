@@ -69,6 +69,7 @@ header {
     }
 
     @include xs-block {
+        padding-top: 50px;
         .page-title {
             font-size: 27px;
         }

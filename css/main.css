@@ -451,8 +451,8 @@ main ::selection {
 .banner img {
   text-align: center;
   overflow: hidden;
-  -webkit-box-shadow: 0 0 30px rgba(0, 0, 0, 0.3);
-          box-shadow: 0 0 30px rgba(0, 0, 0, 0.3);
+  -webkit-box-shadow: 0 0 30px rgba(13, 172, 232, 0.3);
+          box-shadow: 0 0 30px rgba(13, 172, 232, 0.3);
   border-radius: 5px;
 }
 
@@ -774,5 +774,24 @@ main ::selection {
   border: 2px solid #333;
   border-radius: 3px;
   margin-bottom: 20px;
+}
+
+.text-banner {
+  background-color: #f3f3f3;
+  padding: 30px 0;
+}
+
+.text-banner .text {
+  font-size: 22px;
+}
+
+@media screen and (max-width: 576px) {
+  .text-banner .text {
+    margin-bottom: 20px;
+  }
+  .text-banner .container {
+    display: block;
+    text-align: center;
+  }
 }
 /*# sourceMappingURL=main.css.map */
