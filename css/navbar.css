@@ -222,6 +222,7 @@
   .navbar-submenu.big {
     width: 100%;
     left: 0;
+    padding: 0 30px;
   }
   .navbar-submenu.big .row-inner {
     -webkit-box-pack: space-evenly;
@@ -441,9 +442,6 @@
     text-decoration: underline;
     display: inline-block;
     margin: 5px 0;
-  }
-  .navbar-submenu.big {
-    padding: 0 30px;
   }
   .navbar-submenu.big .checkbox-opener:checked + .sublist .subitem {
     max-height: 30px;
