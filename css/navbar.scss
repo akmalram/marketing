@@ -387,12 +387,12 @@ $color-secondary: #fff;
             }
         }
 
-        .checkbox-opener:checked ~ .item &-submenu {
+        .checkbox-opener:checked + .item &-submenu {
             opacity: 1;
             max-height: 200px;
         }
 
-        .checkbox-opener:checked ~ &-submenu.big {
+        #list-1:checked ~ &-submenu.big {
             opacity: 1;
             max-height: 200px;
         }
