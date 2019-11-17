@@ -333,8 +333,7 @@
     -webkit-transition: all .3s ease-in-out;
     transition: all .3s ease-in-out;
     background: #fff;
-    padding-left: 20px;
-    padding-top: 50px;
+    padding: 50px 20px;
   }
   .navbar-menu.active {
     left: 0;
@@ -373,6 +372,7 @@
   }
   .navbar-contacts .telegram {
     margin-bottom: 0;
+    margin-left: 5px;
   }
   .navbar-contacts .phone-call a {
     font-size: 12px;
@@ -391,8 +391,12 @@
         -ms-flex-align: center;
             align-items: center;
   }
-  .navbar-contacts .telegram {
-    margin-left: 5px;
+  .navbar-contacts .phone-call a {
+    display: inline-block;
+    font-size: 12px;
+    border: 2px solid #333;
+    border-radius: 5px;
+    padding: 4px 6px;
   }
   .navbar-contacts .phone-call i, .navbar-contacts .telegram i {
     font-size: 25px;
@@ -412,7 +416,7 @@
   }
   #list-1:checked ~ .navbar-submenu.big {
     opacity: 1;
-    max-height: 200px;
+    max-height: 1500px;
   }
   .navbar-submenu {
     display: block;
@@ -434,6 +438,20 @@
     padding-left: 20px;
     margin: 5px 0;
   }
+  .navbar-submenu .sublist-heading label {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .navbar-submenu .sublist-heading label i {
+    display: block;
+    margin-left: auto;
+    margin-right: 10px;
+    -webkit-transition: -webkit-transform .3s ease-in-out;
+    transition: -webkit-transform .3s ease-in-out;
+    transition: transform .3s ease-in-out;
+    transition: transform .3s ease-in-out, -webkit-transform .3s ease-in-out;
+  }
   .navbar-submenu .subitem {
     padding-left: 10px;
   }
@@ -446,6 +464,10 @@
   .navbar-submenu.big .checkbox-opener:checked + .sublist .subitem {
     max-height: 30px;
     opacity: 1;
+  }
+  .navbar-submenu.big .checkbox-opener:checked + .sublist .sublist-heading label i {
+    -webkit-transform: rotate(-90deg);
+            transform: rotate(-90deg);
   }
   .navbar-submenu.big .subitem {
     margin: 0;

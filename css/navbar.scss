@@ -309,8 +309,7 @@ $color-secondary: #fff;
             height: 100%;
             transition: all .3s ease-in-out;
             background: #fff;
-            padding-left: 20px;
-            padding-top: 50px;
+            padding: 50px 20px;
 
             &.active {
                 left: 0;
@@ -342,6 +341,7 @@ $color-secondary: #fff;
 
             .telegram {
                 margin-bottom: 0;
+                margin-left: 5px;
             }
 
             .phone-call {
@@ -363,8 +363,14 @@ $color-secondary: #fff;
             display: flex;
             align-items: center;
 
-            .telegram {
-                margin-left: 5px;
+            .phone-call {
+                a {
+                    display: inline-block;
+                    font-size: 12px;
+                    border: 2px solid #333;
+                    border-radius: 5px;
+                    padding: 4px 6px;
+                }
             }
 
             .phone-call i, .telegram i{
@@ -396,7 +402,7 @@ $color-secondary: #fff;
 
         #list-1:checked ~ &-submenu.big {
             opacity: 1;
-            max-height: 200px;
+            max-height: 1500px;
         }
 
         &-submenu {
@@ -418,6 +424,17 @@ $color-secondary: #fff;
                 &-heading {
                     padding-left: 20px;
                     margin: 5px 0;
+
+                    label {
+                        display: flex;
+
+                        i {
+                            display: block;
+                            margin-left: auto;
+                            margin-right: 10px;
+                            transition: transform .3s ease-in-out;
+                        }
+                    }
                 }
             }
 
@@ -438,6 +455,10 @@ $color-secondary: #fff;
             .checkbox-opener:checked + .sublist .subitem {
                 max-height: 30px;
                 opacity: 1;
+            }
+
+            .checkbox-opener:checked + .sublist .sublist-heading label i {
+                transform: rotate(-90deg);
             }
 
             .subitem {
