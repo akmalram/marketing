@@ -386,6 +386,10 @@
   .navbar-menu-contact-info .telegram {
     margin-bottom: 9px;
   }
+  .navbar-menu-contact-info .address i {
+    margin-right: 5px;
+    font-size: 19px;
+  }
   .navbar-menu .navbar-logo {
     margin-bottom: 40px;
     width: 100%;
