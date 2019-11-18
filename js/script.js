@@ -119,6 +119,25 @@ ready(() => {
 });
 
 ready(() => {
+    const footer = document.querySelector('footer');
+    const coorY = footer.getBoundingClientRect().top + document.body.scrollTop;
+
+    if(window.scrollY + 500 > coorY) {
+        footer.classList.add('footer-visible');
+    }else if(window.scrollY + 500 < coorY) {
+        footer.classList.remove('footer-visible');
+    }
+
+    window.addEventListener('scroll', () => {
+        if(window.scrollY + 500 > coorY) {
+            footer.classList.add('footer-visible');
+        }else if(window.scrollY + 500 < coorY) {
+            footer.classList.remove('footer-visible');
+        }
+    });
+})
+
+ready(() => {
     const ShowMoreClassToggler = () => {
         const btn = document.querySelector('.whatis .showmorebtn');
         const menu = document.querySelector('.whatis');

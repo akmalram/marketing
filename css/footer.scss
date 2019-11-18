@@ -1,11 +1,30 @@
 @import './smart-grid';
 @import './mixins';
 
+
 footer {
     @include content-padding();
+    background-color: #151515;
+    color: #fff;
+    z-index: -1;
+
+    &.footer-visible {
+        .footer-wrapper {
+            opacity: 1;
+            transform: translateY(0px);
+        }
+    }
+
+    .footer-wrapper {
+        transition: all .7s ease;
+        opacity: 0;
+        transform: translateY(-100px);
+    }
 
     .title-tertiary {
         text-align: left;
+        margin-top: 0;
+        color: #fff;
 
         @include xs-block {
             text-align: center;
@@ -29,7 +48,7 @@ footer {
 
     .logo a {
         font-size: 24px;
-        color: #333;
+        color: #fff;
     }
     .desc {
         font-size: 14px;
@@ -49,10 +68,22 @@ footer {
             border: 1px solid #c6c6c6;
             border-radius: 3px;
             font-size: 18px;
-            color: #3b3b3b;
+            background: #151515;
+            color: #fff;
             padding: 0 22px;
             margin-bottom: 20px;
             box-sizing: border-box;
+        }
+    }
+
+    .btn-primary {
+        background: transparent;
+        color: #fff;
+        border-color: #fff;
+
+        &:hover {
+            background: #5b5b5b;
+            color: #fff;
         }
     }
 
@@ -63,7 +94,7 @@ footer {
 
         .link {
             font-size: 18px;
-            color: #333;
+            color: #fff;
 
             &:hover {
                 text-decoration: underline;
@@ -77,12 +108,12 @@ footer {
 
     .socials {
         a {
-            color: #333;
+            color: #fff;
             font-size: 30px;
             transition: all .3s ease-in-out;
 
             &:hover {
-                text-shadow: 0 0 15px rgba($color: #333, $alpha: .4);
+                text-shadow: 0 0 15px rgba($color: #fff, $alpha: .4);
             }
         }
     }
@@ -99,7 +130,7 @@ footer {
         margin: 10px 0;
         a, p {
             font-size: 16px;
-            color: #333;
+            color: #fff;
             display: block;
             margin: 4px 0;
 

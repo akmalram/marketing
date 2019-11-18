@@ -1,5 +1,8 @@
 footer {
   padding: 80px 0;
+  background-color: #151515;
+  color: #fff;
+  z-index: -1;
 }
 
 @media only screen and (max-width: 768px) {
@@ -14,8 +17,24 @@ footer {
   }
 }
 
+footer.footer-visible .footer-wrapper {
+  opacity: 1;
+  -webkit-transform: translateY(0px);
+          transform: translateY(0px);
+}
+
+footer .footer-wrapper {
+  -webkit-transition: all .7s ease;
+  transition: all .7s ease;
+  opacity: 0;
+  -webkit-transform: translateY(-100px);
+          transform: translateY(-100px);
+}
+
 footer .title-tertiary {
   text-align: left;
+  margin-top: 0;
+  color: #fff;
 }
 
 @media screen and (max-width: 576px) {
@@ -57,7 +76,7 @@ footer .col {
 
 footer .logo a {
   font-size: 24px;
-  color: #333;
+  color: #fff;
 }
 
 footer .desc {
@@ -77,11 +96,23 @@ footer .subscribe-form input {
   border: 1px solid #c6c6c6;
   border-radius: 3px;
   font-size: 18px;
-  color: #3b3b3b;
+  background: #151515;
+  color: #fff;
   padding: 0 22px;
   margin-bottom: 20px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+}
+
+footer .btn-primary {
+  background: transparent;
+  color: #fff;
+  border-color: #fff;
+}
+
+footer .btn-primary:hover {
+  background: #5b5b5b;
+  color: #fff;
 }
 
 footer .list .item {
@@ -90,7 +121,7 @@ footer .list .item {
 
 footer .list .link {
   font-size: 18px;
-  color: #333;
+  color: #fff;
 }
 
 footer .list .link:hover {
@@ -104,14 +135,14 @@ footer .list .link:hover {
 }
 
 footer .socials a {
-  color: #333;
+  color: #fff;
   font-size: 30px;
   -webkit-transition: all .3s ease-in-out;
   transition: all .3s ease-in-out;
 }
 
 footer .socials a:hover {
-  text-shadow: 0 0 15px rgba(51, 51, 51, 0.4);
+  text-shadow: 0 0 15px rgba(255, 255, 255, 0.4);
 }
 
 footer .telegram {
@@ -128,7 +159,7 @@ footer .contacts {
 
 footer .contacts a, footer .contacts p {
   font-size: 16px;
-  color: #333;
+  color: #fff;
   display: block;
   margin: 4px 0;
 }

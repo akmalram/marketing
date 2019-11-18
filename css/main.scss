@@ -20,6 +20,8 @@ main {
 .whatis,
 .employees {
     @include content-padding();
+    z-index: 1111;
+    background-color: #fff;
 }
 
 .presentation {
