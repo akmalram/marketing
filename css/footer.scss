@@ -3,68 +3,66 @@
 
 footer {
     @include content-padding();
-    .container {
-        max-width: 800px;
+
+    .title-tertiary {
+        text-align: left;
+
+        @include xs-block {
+            text-align: center;
+        }
     }
 
-    .row {
-        justify-content: space-evenly;
+    .order-last {
+        @include sm-block {
+            order: 10;
+        }
     }
 
-    .left, .right {
+    .col {
         @include col();
-        @include size(12);
-        @include size-sm(20);
-        @include sm(margin-bottom, 40px);
+        @include size(6);
+        @include size-sm(12);
+        @include size-xs(24);
+        box-sizing: border-box;
+        padding: 20px;
+    }
+
+    .logo a {
+        font-size: 24px;
+        color: #333;
+    }
+    .desc {
+        font-size: 14px;
+        margin-bottom: 10px;
+    }
+
+    .subscribe-form {
+        p {
+            font-size: 30px;
+            font-weight: 300;
+            margin-bottom: 10px;
+        }
+
+        input {
+            width: 100%;
+            height: 35px;
+            border: 1px solid #c6c6c6;
+            border-radius: 3px;
+            font-size: 18px;
+            color: #3b3b3b;
+            padding: 0 22px;
+            margin-bottom: 20px;
+            box-sizing: border-box;
+        }
     }
 
     .list {
-        .link {
-            font-size: 21px;
-            color: #333;
-
-            &:hover {
-                text-decoration: underline;
-            }
-        }
-
         .item {
-            margin: 5px 0;
+            margin-bottom: 5px;
         }
-    }
 
-    .logo {
-        font-size: 30px;
-        text-align: center;
-        a {
-            color: #333;
-        }
-    }
-
-    .social-links {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-
-        a {
-            font-size: 30px;
-            display: inline-block;
-            margin: 0 15px;
-            color: #333;
-            transition: text-shadow .2s;
-
-            &:hover {
-                text-shadow: 0 0 2px #333;
-            }
-        }
-    }
-
-    .footer-contacts {
-        margin-bottom: 20px;
-        font-size: 21px;
-        line-height: 1.5;
-
-        a {
+        .link {
+            font-size: 18px;
             color: #333;
 
             &:hover {
@@ -72,8 +70,42 @@ footer {
             }
         }
 
-        @include sm-block {
+        @include xs-block {
             text-align: center;
+        }
+    }
+
+    .socials {
+        a {
+            color: #333;
+            font-size: 30px;
+            transition: all .3s ease-in-out;
+
+            &:hover {
+                text-shadow: 0 0 15px rgba($color: #333, $alpha: .4);
+            }
+        }
+    }
+
+    .telegram {
+        margin: 10px 0;
+
+        a {
+            font-size: 16px;
+        }
+    }
+
+    .contacts {
+        margin: 10px 0;
+        a, p {
+            font-size: 16px;
+            color: #333;
+            display: block;
+            margin: 4px 0;
+
+            i {
+                margin-right: 5px;
+            }
         }
     }
 }

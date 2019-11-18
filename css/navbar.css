@@ -387,14 +387,12 @@
     margin-top: 90px;
   }
   .navbar-menu-contact-info .phone-call a, .navbar-menu-contact-info .email a {
-    display: -webkit-inline-box;
-    display: -ms-inline-flexbox;
-    display: inline-flex;
     color: #000;
     font-size: 18px;
   }
   .navbar-menu-contact-info .phone-call a i, .navbar-menu-contact-info .email a i {
     margin-right: 5px;
+    display: inline-block !important;
   }
   .navbar-menu-contact-info .phone-call,
   .navbar-menu-contact-info .telegram,

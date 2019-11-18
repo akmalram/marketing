@@ -356,12 +356,12 @@ $color-secondary: #fff;
         &-menu-contact-info {
             margin-top: 90px;
             .phone-call a, .email a {
-                display: inline-flex;
                 color: #000;
                 font-size: 18px;
 
                 i {
                     margin-right: 5px;
+                    display: inline-block !important;
                 }
             }
 
