@@ -116,8 +116,8 @@ main ::selection {
   right: -6%;
   z-index: -1;
   border-radius: 15px;
-  -webkit-transition: all .5s ease-in-out;
-  transition: all .5s ease-in-out;
+  -webkit-transition: all .3s ease;
+  transition: all .3s ease;
 }
 
 .presentation .item:hover::before {
@@ -125,6 +125,12 @@ main ::selection {
   height: 100%;
   top: 0;
   right: 0;
+}
+
+.presentation .item:hover .btn-primary {
+  -webkit-transform: translateY(0px);
+          transform: translateY(0px);
+  opacity: 1;
 }
 
 .presentation .img img {
@@ -154,6 +160,13 @@ main ::selection {
   display: inline-block;
   margin-top: auto;
   font-size: 15px;
+  -webkit-transform: translateY(-10px);
+          transform: translateY(-10px);
+  opacity: 0;
+  -webkit-transition: all .2s ease;
+  transition: all .2s ease;
+  -webkit-transition-delay: .1s;
+          transition-delay: .1s;
 }
 
 @media screen and (max-width: 576px) {
