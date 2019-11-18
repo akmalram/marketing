@@ -1,10 +1,10 @@
-const load = (callback) => {
-    window.addEventListener('load', (e) => {
+const ready = (callback) => {
+    window.addEventListener('DOMContentLoaded', (e) => {
         callback(e);
     })
 }
 
-load(() => {
+ready(() => {
     const MenuClassToggler = () => {
         const btn = document.querySelector('.navbar-toggler .btn');
         const menu = document.querySelector('.navbar-menu');
@@ -18,7 +18,7 @@ load(() => {
     MenuClassToggler();
 });
 
-load(() => {
+ready(() => {
     let mySwiper = new Swiper('.swiper-container.aboutus-slider', {
         speed: 400,
         navigation: {
@@ -98,7 +98,7 @@ load(() => {
     })
 });
 
-load(() => {
+ready(() => {
     const element = document.querySelector('.navbar');
     window.addEventListener('scroll', () => {
 
@@ -112,12 +112,12 @@ load(() => {
 
     if(window.pageYOffset > 0) {
         element.classList.add('scrolled');
-    }else if (window.pageYOffset < 200) {
+    }else if (window.pageYOffset == 0) {
         element.classList.remove('scrolled');
     }
 });
 
-load(() => {
+ready(() => {
     const ShowMoreClassToggler = () => {
         const btn = document.querySelector('.whatis .showmorebtn');
         const menu = document.querySelector('.whatis');
@@ -133,14 +133,37 @@ load(() => {
     ShowMoreClassToggler();
 });
 
-load(() => {
+ready(() => {
     document.querySelector('header').style.cssText = `background-position-y: calc(50% + ${window.scrollY / 5}px);`
 
     window.addEventListener('scroll', () => {
-        document.querySelector('header').style.cssText = `background-position-y: calc(50% + ${window.scrollY / 5}px);`
+        document.querySelector('header').style.cssText = `background-position-y: calc(50% - ${window.scrollY / 5}px);`
     });
 });
 
+
+ready(() => {
+    const modalToggler = (buttonClass, modalClass) => {
+        let btn = document.querySelectorAll(buttonClass),
+            modal = document.querySelector(modalClass),
+            closetBtn = document.querySelector(`${modalClass} .close-btn`),
+            modalBackground = document.querySelector(`${modalClass} .modal-background`);
+
+        btn.forEach(one => {
+            one.addEventListener('click', () => {
+                modal.classList.add('active');
+            });
+        });
+
+        [closetBtn, modalBackground].forEach(one => {
+            one.addEventListener('click', () => {
+                modal.classList.remove('active');
+            });
+        });
+    }
+
+    modalToggler('.btn-primary', '.register-modal')
+})
 
 // Font Observing
 

@@ -7,7 +7,7 @@ header {
 header {
   background: #333 url(../img/webp/header-bg.webp) center center no-repeat;
   background-size: cover;
-  background-position-y: 50%;
+  background-attachment: fixed;
 }
 
 .header-content {

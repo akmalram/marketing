@@ -276,6 +276,10 @@
   color: #333;
 }
 
+.navbar-contacts .phone-call a:hover {
+  text-decoration: underline;
+}
+
 .navbar-contacts .telegram {
   margin-bottom: 5px;
 }
