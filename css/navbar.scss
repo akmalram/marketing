@@ -210,7 +210,7 @@ $color-secondary: #fff;
             }
 
             .sublist-heading {
-                margin-bottom: 15px;
+                margin: 15px 0;
                 font-weight: bold;
                 text-align: center;
 
@@ -326,11 +326,22 @@ $color-secondary: #fff;
                 height: auto;
                 position: static;
                 display: block;
+                width: 100%;
+            }
+
+            .link {
+                display: block;
+
+                label {
+                    display: block;
+                    width: 100%;
+                }
             }
         }
 
         &-menu &-logo {
             margin-bottom: 40px;
+            width: 100%;
         }
 
         &-contacts {
@@ -384,7 +395,6 @@ $color-secondary: #fff;
 
 @include sm-block {
     .navbar {
-
         &-menu {
             overflow-y: scroll;
         }
