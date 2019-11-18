@@ -12,6 +12,7 @@ ready(() => {
         btn.addEventListener('click', () => {
             btn.classList.toggle('active');
             menu.classList.toggle('active');
+            document.querySelector('body').classList.toggle('overhidden');
         });
     }
 
