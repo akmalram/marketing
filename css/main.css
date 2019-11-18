@@ -111,7 +111,7 @@ main ::selection {
   width: 90%;
   height: 80%;
   position: absolute;
-  background: #e0e0e0;
+  background: #f3f3f3;
   top: 10%;
   right: -6%;
   z-index: -1;
