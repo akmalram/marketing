@@ -90,6 +90,8 @@ main ::selection {
           align-items: center;
   -webkit-transition: all .3s ease-in-out;
   transition: all .3s ease-in-out;
+  position: relative;
+  z-index: 11;
 }
 
 @media screen and (max-width: 768px) {
@@ -104,11 +106,29 @@ main ::selection {
   }
 }
 
-.presentation .item:hover {
-  -webkit-box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
-          box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
-  -webkit-transform: translateY(-3px);
-          transform: translateY(-3px);
+.presentation .item::before {
+  content: "";
+  width: 90%;
+  height: 80%;
+  position: absolute;
+  background: #e0e0e0;
+  top: 10%;
+  right: -6%;
+  z-index: -1;
+  border-radius: 15px;
+  -webkit-transition: all .5s ease-in-out;
+  transition: all .5s ease-in-out;
+}
+
+.presentation .item:hover::before {
+  width: 100%;
+  height: 100%;
+  top: 0;
+  right: 0;
+}
+
+.presentation .img img {
+  border-radius: 5px;
 }
 
 .presentation .img i {

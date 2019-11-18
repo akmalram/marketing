@@ -48,11 +48,38 @@ main {
 
         transition: all .3s ease-in-out;
 
+        position: relative;
+        z-index: 11;
+
+        &::before {
+            content: "";
+            width: 90%;
+            height: 80%;
+            position: absolute;
+            background: rgb(224, 224, 224);
+            top: 10%;
+            right: -6%;
+            z-index: -1;
+            border-radius: 15px;
+            transition: all .5s ease-in-out;
+        }
+
+        &:hover::before {
+            width: 100%;
+            height: 100%;
+            top: 0;
+            right: 0;
+        }
+
         &:hover {
             // background: #6363630e;
-            box-shadow: 0 20px 60px rgba($color: #000000, $alpha: .1);
-            transform: translateY(-3px);
+            // box-shadow: 0 20px 60px rgba($color: #000000, $alpha: .1);
+            // transform: translateY(-3px);
         }
+    }
+
+    .img img {
+        border-radius: 5px;
     }
 
     .img i {

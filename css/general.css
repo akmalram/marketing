@@ -276,8 +276,10 @@ img {
   text-align: center;
 }
 
-.overhidden {
-  overflow: hidden;
+@media screen and (max-width: 768px) {
+  .overhidden {
+    overflow: hidden;
+  }
 }
 
 button {
