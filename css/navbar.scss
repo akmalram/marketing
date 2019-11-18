@@ -335,11 +335,30 @@ $color-secondary: #fff;
 
             .link {
                 display: block;
+                font-size: 20px;
 
                 label {
                     display: block;
                     width: 100%;
                 }
+            }
+        }
+
+        &-menu-contact-info {
+            .phone-call a {
+                display: inline-flex;
+                color: #333;
+                font-size: 18px;
+
+                i {
+                    margin-right: 5px;
+                }
+            }
+
+            .phone-call,
+            .telegram,
+            .address {
+                margin-top: 9px;
             }
         }
 

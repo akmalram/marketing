@@ -363,10 +363,26 @@
   }
   .navbar-menu .link {
     display: block;
+    font-size: 20px;
   }
   .navbar-menu .link label {
     display: block;
     width: 100%;
+  }
+  .navbar-menu-contact-info .phone-call a {
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    color: #333;
+    font-size: 18px;
+  }
+  .navbar-menu-contact-info .phone-call a i {
+    margin-right: 5px;
+  }
+  .navbar-menu-contact-info .phone-call,
+  .navbar-menu-contact-info .telegram,
+  .navbar-menu-contact-info .address {
+    margin-top: 9px;
   }
   .navbar-menu .navbar-logo {
     margin-bottom: 40px;
