@@ -372,18 +372,19 @@
   .navbar-menu-contact-info {
     margin-top: 110px;
   }
-  .navbar-menu-contact-info .phone-call a {
+  .navbar-menu-contact-info .phone-call a, .navbar-menu-contact-info .email a {
     display: -webkit-inline-box;
     display: -ms-inline-flexbox;
     display: inline-flex;
-    color: #333;
+    color: #000;
     font-size: 18px;
   }
-  .navbar-menu-contact-info .phone-call a i {
+  .navbar-menu-contact-info .phone-call a i, .navbar-menu-contact-info .email a i {
     margin-right: 5px;
   }
   .navbar-menu-contact-info .phone-call,
-  .navbar-menu-contact-info .telegram {
+  .navbar-menu-contact-info .telegram,
+  .navbar-menu-contact-info .email {
     margin-bottom: 9px;
   }
   .navbar-menu-contact-info .address i {
@@ -492,7 +493,6 @@
   }
   .navbar-submenu .sublink {
     color: #333;
-    text-decoration: underline;
     display: inline-block;
     margin: 5px 0;
   }
