@@ -165,6 +165,7 @@ $color-secondary: #fff;
             transform: translateY(40px);
             visibility: hidden;
             transition: all .2s ease-in-out;
+            box-sizing: border-box;
 
 
             .subitem {
@@ -193,7 +194,7 @@ $color-secondary: #fff;
         @media only screen and (min-width: 769px) {
             width: 100%;
             left: 0;
-            padding: 0 30px;
+            padding: 0 10px;
 
 
             .row-inner {
@@ -338,14 +339,22 @@ $color-secondary: #fff;
                 font-size: 20px;
 
                 label {
-                    display: block;
+                    display: flex;
                     width: 100%;
+
+                    i {
+                        margin-left: auto;
+                        margin-right: 10px;
+                        font-size: 16px;
+                        transition: transform .3s ease-in-out;
+                        line-height: 24px;
+                    }
                 }
             }
         }
 
         &-menu-contact-info {
-            margin-top: 110px;
+            margin-top: 90px;
             .phone-call a, .email a {
                 display: inline-flex;
                 color: #000;
@@ -442,6 +451,10 @@ $color-secondary: #fff;
         #list-1:checked ~ &-submenu.big {
             opacity: 1;
             max-height: 1500px;
+        }
+
+        .list > .checkbox-opener:checked + .item label i {
+            transform: rotate(90deg);
         }
 
         &-submenu {

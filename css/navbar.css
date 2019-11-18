@@ -197,6 +197,8 @@
     visibility: hidden;
     -webkit-transition: all .2s ease-in-out;
     transition: all .2s ease-in-out;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
   }
   .navbar-submenu .subitem {
     margin: 10px 0;
@@ -222,7 +224,7 @@
   .navbar-submenu.big {
     width: 100%;
     left: 0;
-    padding: 0 30px;
+    padding: 0 10px;
   }
   .navbar-submenu.big .row-inner {
     -webkit-box-pack: space-evenly;
@@ -366,11 +368,23 @@
     font-size: 20px;
   }
   .navbar-menu .link label {
-    display: block;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
     width: 100%;
   }
+  .navbar-menu .link label i {
+    margin-left: auto;
+    margin-right: 10px;
+    font-size: 16px;
+    -webkit-transition: -webkit-transform .3s ease-in-out;
+    transition: -webkit-transform .3s ease-in-out;
+    transition: transform .3s ease-in-out;
+    transition: transform .3s ease-in-out, -webkit-transform .3s ease-in-out;
+    line-height: 24px;
+  }
   .navbar-menu-contact-info {
-    margin-top: 110px;
+    margin-top: 90px;
   }
   .navbar-menu-contact-info .phone-call a, .navbar-menu-contact-info .email a {
     display: -webkit-inline-box;
@@ -453,6 +467,10 @@
   #list-1:checked ~ .navbar-submenu.big {
     opacity: 1;
     max-height: 1500px;
+  }
+  .navbar .list > .checkbox-opener:checked + .item label i {
+    -webkit-transform: rotate(90deg);
+            transform: rotate(90deg);
   }
   .navbar-submenu {
     display: block;

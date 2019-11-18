@@ -78,6 +78,10 @@ img {
   font-style: normal;
 }
 
+*:focus {
+  outline: none;
+}
+
 html.fonts-loaded body {
   font-family: 'Gilroy', sans-serif;
 }
