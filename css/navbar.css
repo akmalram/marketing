@@ -369,6 +369,9 @@
     display: block;
     width: 100%;
   }
+  .navbar-menu-contact-info {
+    margin-top: 110px;
+  }
   .navbar-menu-contact-info .phone-call a {
     display: -webkit-inline-box;
     display: -ms-inline-flexbox;
@@ -380,9 +383,8 @@
     margin-right: 5px;
   }
   .navbar-menu-contact-info .phone-call,
-  .navbar-menu-contact-info .telegram,
-  .navbar-menu-contact-info .address {
-    margin-top: 9px;
+  .navbar-menu-contact-info .telegram {
+    margin-bottom: 9px;
   }
   .navbar-menu .navbar-logo {
     margin-bottom: 40px;
@@ -495,8 +497,8 @@
     opacity: 1;
   }
   .navbar-submenu.big .checkbox-opener:checked + .sublist .sublist-heading label i {
-    -webkit-transform: rotate(-90deg);
-            transform: rotate(-90deg);
+    -webkit-transform: rotate(90deg);
+            transform: rotate(90deg);
   }
   .navbar-submenu.big .subitem {
     margin: 0;

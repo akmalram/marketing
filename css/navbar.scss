@@ -345,6 +345,7 @@ $color-secondary: #fff;
         }
 
         &-menu-contact-info {
+            margin-top: 110px;
             .phone-call a {
                 display: inline-flex;
                 color: #333;
@@ -356,9 +357,8 @@ $color-secondary: #fff;
             }
 
             .phone-call,
-            .telegram,
-            .address {
-                margin-top: 9px;
+            .telegram {
+                margin-bottom: 9px;
             }
         }
 
@@ -491,7 +491,7 @@ $color-secondary: #fff;
             }
 
             .checkbox-opener:checked + .sublist .sublist-heading label i {
-                transform: rotate(-90deg);
+                transform: rotate(90deg);
             }
 
             .subitem {
